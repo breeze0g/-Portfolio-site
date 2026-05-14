@@ -186,6 +186,7 @@
             font-weight: bold;
             margin-top: 8px;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .project-card:hover .live-site {
@@ -364,7 +365,6 @@
         <!-- Profile Section -->
         <div class="profile">
             <div class="avatar">
-                <!-- profile photo placeholder (keep as is) -->
                 <img src="images/IMG_0588.JPG" alt="Bildad Mwita Profile Photo" onerror="this.src='https://ui-avatars.com/api/?background=667eea&color=fff&rounded=true&size=120&name=Bildad+Matiko'">
             </div>
             <h1>Bildad Mwita Matiko</h1>
@@ -373,13 +373,12 @@
             </div>
         </div>
 
-        <!-- ========== RESUME & CV SECTION (integrated content) ========== -->
+        <!-- ========== RESUME & CV SECTION ========== -->
         <div class="title-wrapper">
             <div class="section-title">📄 Resume & Credentials</div>
         </div>
 
         <div class="resume-grid">
-            <!-- About Me + Summary Card -->
             <div class="info-card">
                 <div class="card-header">
                     <i class="fas fa-user-astronaut"></i>
@@ -391,7 +390,6 @@
                 </div>
             </div>
 
-            <!-- Education & Certificates (Rungiri removed as requested) -->
             <div class="info-card">
                 <div class="card-header">
                     <i class="fas fa-graduation-cap"></i>
@@ -410,7 +408,6 @@
                 </div>
             </div>
 
-            <!-- Technical Skills (detailed) -->
             <div class="info-card">
                 <div class="card-header">
                     <i class="fas fa-code"></i>
@@ -426,7 +423,6 @@
                 </div>
             </div>
 
-            <!-- Work mindset / all-in attitude (perfect for job apps) -->
             <div class="info-card">
                 <div class="card-header">
                     <i class="fas fa-bullseye"></i>
@@ -448,8 +444,16 @@
             <div class="section-title">🚀 Featured Projects</div>
         </div>
 
-        <!-- Projects Grid (original design + extra consistency) -->
+        <!-- Projects Grid -->
         <div class="projects-grid" id="projectsGrid">
+            <!-- Let's Get Vintage - NEW ADDITION -->
+            <a href="https://cap-with-me.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon">🛍️</div>
+                <div class="project-title">Let's Get Vintage</div>
+                <div class="project-description">Full-stack e-commerce app for vintage fashion. Features product gallery, Stripe payments, responsive design, and smooth navigation. Built with React and Stripe API.</div>
+                <div class="live-site">🔗 Live Demo</div>
+            </a>
+
             <!-- Totes by Panda -->
             <a href="https://breeze0g.github.io/Totes-by-panda/" target="_blank" class="project-card">
                 <div class="project-icon">🐼</div>
@@ -474,7 +478,7 @@
                 <div class="live-site">🔗 Live Site</div>
             </a>
 
-            <!-- Wallpaper Paradise (React + Laravel) -->
+            <!-- Wallpaper Paradise -->
             <a href="https://wallpaper-paradise.vercel.app/" target="_blank" class="project-card">
                 <div class="project-icon">🖼️</div>
                 <div class="project-title">Wallpaper Paradise</div>
@@ -489,17 +493,9 @@
                 <div class="project-description">Responsive portfolio site (HTML, CSS, JS) showcasing projects and skills. Fully mobile-friendly.</div>
                 <div class="live-site" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">✨ View Repo</div>
             </a>
-
-            <!-- Next milestone / placeholder -->
-            <a href="#" target="_blank" class="project-card" style="opacity: 0.85;">
-                <div class="project-icon">🚧</div>
-                <div class="project-title">More Coming Soon</div>
-                <div class="project-description">New full-stack projects in React Native, advanced Laravel APIs — stay tuned.</div>
-                <div class="live-site" style="background: #999;">⏳ In Progress</div>
-            </a>
         </div>
 
-        <!-- Additional Resume Details (CV in depth) -->
+        <!-- Additional Resume Details -->
         <div class="title-wrapper">
             <div class="section-title">📋 Full CV Highlights</div>
         </div>
@@ -510,6 +506,7 @@
                     <h3>Experience & Projects Insight</h3>
                 </div>
                 <ul class="resume-list">
+                    <li><i class="fas fa-code-branch"></i> <strong>Let's Get Vintage</strong> – React + Stripe e-commerce: product gallery, payment integration, mobile responsive.</li>
                     <li><i class="fas fa-code-branch"></i> <strong>Wallpaper Paradise</strong> – React + Laravel full-stack: authentication, search, download, admin panel capabilities.</li>
                     <li><i class="fas fa-mobile-alt"></i> <strong>Android Dev practice</strong> – Built small utility apps to strengthen mobile dev logic.</li>
                     <li><i class="fas fa-palette"></i> <strong>Web Development & Debugging</strong> – Optimized websites for performance, cross-browser compatibility.</li>
@@ -558,7 +555,7 @@
             </div>
         </div>
 
-        <!-- Social Links (original untouched) -->
+        <!-- Social Links -->
         <div class="social-links">
             <a href="https://github.com/breeze0g" target="_blank" rel="noopener noreferrer" class="social-link">
                 <i class="fab fa-github"></i> GitHub
@@ -580,7 +577,6 @@
     </div>
 
     <script>
-        // Spider Web / Particle Network Animation (enhanced, same as original with subtle improvements)
         const canvas = document.getElementById('bgCanvas');
         const ctx = canvas.getContext('2d');
         
@@ -596,8 +592,6 @@
                 this.vx = (Math.random() - 0.5) * 0.5;
                 this.vy = (Math.random() - 0.5) * 0.5;
                 this.radius = Math.random() * 2 + 1;
-                this.originalX = this.x;
-                this.originalY = this.y;
             }
             
             update() {
