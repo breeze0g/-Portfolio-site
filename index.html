@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>My Projects Portfolio - Totes by Panda & TechBook</title>
+    <title>Bildad Mwita | Full-Stack Developer Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -34,7 +33,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             position: relative;
@@ -94,20 +93,29 @@
             margin-bottom: 20px;
         }
 
-        /* Projects Grid */
-        .projects-title {
+        /* Projects Title */
+        .section-title {
             color: white;
-            font-size: 20px;
-            margin: 20px 0 15px;
+            font-size: 24px;
+            margin: 40px 0 20px;
             text-align: center;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            width: auto;
+            padding-bottom: 8px;
+        }
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 10px;
         }
 
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
         .project-card {
@@ -185,6 +193,120 @@
             transform: translateX(5px);
         }
 
+        /* Resume/CV Cards Layout */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 24px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card-header i {
+            font-size: 28px;
+            color: #667eea;
+        }
+
+        .card-header h3 {
+            font-size: 22px;
+            color: #1a1a4a;
+            margin: 0;
+        }
+
+        .info-text {
+            color: #2d3748;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin: 5px 6px 5px 0;
+            transition: 0.2s;
+        }
+
+        .skill-badge:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .resume-list {
+            list-style: none;
+            padding: 0;
+        }
+        .resume-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 14px;
+            color: #2d3748;
+        }
+        .resume-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #667eea;
+            font-size: 14px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        .contact-item i {
+            width: 28px;
+            color: #667eea;
+            font-size: 18px;
+        }
+        .contact-item a {
+            color: #2d3748;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .contact-item a:hover {
+            color: #667eea;
+            text-decoration: underline;
+        }
+
+        .certificate-badge {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+        }
+
         /* Social Links */
         .social-links {
             display: flex;
@@ -222,9 +344,12 @@
             border-radius: 20px;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 12px;
+            }
+            .resume-grid {
+                grid-template-columns: 1fr;
             }
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -236,66 +361,205 @@
     <canvas id="bgCanvas"></canvas>
     
     <div class="container">
-        <!-- Profile Section - UPDATE WITH YOUR NAME, BIO, AND PHOTO -->
+        <!-- Profile Section -->
         <div class="profile">
             <div class="avatar">
-                <!-- REPLACE "your-photo.jpg" WITH YOUR ACTUAL PHOTO FILE NAME -->
-                <img src="images/IMG_0588.JPG" alt="Profile Photo">
+                <!-- profile photo placeholder (keep as is) -->
+                <img src="images/IMG_0588.JPG" alt="Bildad Mwita Profile Photo" onerror="this.src='https://ui-avatars.com/api/?background=667eea&color=fff&rounded=true&size=120&name=Bildad+Matiko'">
             </div>
-            <h1>Bildad Mwita</h1>
+            <h1>Bildad Mwita Matiko</h1>
             <div class="bio">
-                Web Developer | Building cool things
+                Full-Stack Developer | React · Laravel · PHP · Problem Solver
             </div>
         </div>
 
-        <div class="projects-title">
-            🚀 My Projects
+        <!-- ========== RESUME & CV SECTION (integrated content) ========== -->
+        <div class="title-wrapper">
+            <div class="section-title">📄 Resume & Credentials</div>
         </div>
 
-        <!-- Projects Grid -->
+        <div class="resume-grid">
+            <!-- About Me + Summary Card -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h3>About Me</h3>
+                </div>
+                <div class="info-text">
+                    <p>I'm a passionate web developer with hands-on experience in creating responsive, user-friendly websites. I enjoy turning ideas into real, functional projects and learning new tools along the way. Through personal projects and certificates in React, Laravel, PHP, JavaScript, I've built strong problem-solving skills and the ability to deliver working solutions.</p>
+                    <p style="margin-top: 12px;"><strong>📍 Nairobi, Kenya</strong> | <strong>📅 Born:</strong> 12th April 2000</p>
+                </div>
+            </div>
+
+            <!-- Education & Certificates combined -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education & Certificates</h3>
+                </div>
+                <div class="info-text">
+                    <p><strong>🎓 Certificate in Web Programming</strong> — MAT | Jan 2025 - Present<br>
+                    <span style="font-size: 14px;">Practical, project-based learning: responsive layouts, frontend/backend (HTML, CSS, JS, PHP), real-world projects.</span></p>
+                    <p><strong>🏫 Rungiri Secondary School</strong> — Completed · Physics, Math, Computer, English, Kiswahili, Business</p>
+                    <p><strong>📜 Professional Certificates:</strong></p>
+                    <div>
+                        <span class="skill-badge">Laravel Certificate</span>
+                        <span class="skill-badge">React Certificate</span>
+                        <span class="skill-badge">JavaScript Certificate</span>
+                        <span class="skill-badge">HTML & CSS Certificate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills (detailed) -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Technical Arsenal</h3>
+                </div>
+                <div class="info-text">
+                    <p><strong>Frontend:</strong> React, JavaScript, HTML5, CSS3, Responsive Design</p>
+                    <p><strong>Backend:</strong> PHP, Laravel, REST APIs, SQL</p>
+                    <p><strong>Database:</strong> MySQL</p>
+                    <p><strong>Tools:</strong> Git, VS Code, Composer, NPM, Laravel Cloud, Vercel</p>
+                    <p><strong>Mobile:</strong> Android development basics</p>
+                    <p><strong>Soft Skills:</strong> Problem-solving · Independent learning · Adaptability · Attention to detail</p>
+                </div>
+            </div>
+
+            <!-- Work mindset / all-in attitude (perfect for job apps) -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Mindset & Approach</h3>
+                </div>
+                <div class="info-text">
+                    <p><i class="fas fa-check-circle" style="color:#667eea;"></i> "I solve problems no matter what it takes. I may need a moment to think, but given a real challenge, I deliver."</p>
+                    <p><i class="fas fa-rocket" style="color:#667eea;"></i> Ready to go all-in, learn while in progress, and contribute from day one.</p>
+                    <p><i class="fas fa-language"></i> <strong>Languages:</strong> English (Fluent), Kiswahili (Fluent)</p>
+                    <div class="certificate-badge" style="margin-top: 12px;">
+                        <i class="fas fa-heart" style="color:#e53e3e;"></i> Building websites & apps · Anime & gaming (creativity + logic)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section Title -->
+        <div class="title-wrapper">
+            <div class="section-title">🚀 Featured Projects</div>
+        </div>
+
+        <!-- Projects Grid (original design + extra consistency) -->
         <div class="projects-grid" id="projectsGrid">
-            <!-- Project 1: Totes by Panda -->
+            <!-- Totes by Panda -->
             <a href="https://breeze0g.github.io/Totes-by-panda/" target="_blank" class="project-card">
                 <div class="project-icon">🐼</div>
                 <div class="project-title">Totes by Panda</div>
-                <div class="project-description">A stylish e-commerce website for quality tote bags. Features product showcases, customer reviews, and contact integration.</div>
+                <div class="project-description">E-commerce for stylish tote bags. Product showcase, customer reviews, contact integration. Built with HTML, CSS, JavaScript.</div>
                 <div class="live-site">🔗 Live Site</div>
             </a>
 
-            <!-- Project 2: TechBook - Device Repair Booking System -->
+            <!-- TechBook - Device Repair Booking System -->
             <a href="https://techbook-main-wvyumy.free.laravel.cloud/" target="_blank" class="project-card">
                 <div class="project-icon">🔧</div>
                 <div class="project-title">TechBook</div>
-                <div class="project-description">A complete device repair booking system. Users can book repairs, upload issue photos, track status, send messages, and chat with admin. (Full-stack Laravel app)</div>
+                <div class="project-description">Laravel repair booking system: users book repairs, upload issue photos, track status, chat with admin. Full-stack.</div>
                 <div class="live-site">🔗 Live Site</div>
             </a>
 
-            <!-- Project 3: Together - Chat Application -->
+            <!-- Together - Chat Application -->
             <a href="https://together-seven-puce.vercel.app/" target="_blank" class="project-card">
                 <div class="project-icon">💬</div>
                 <div class="project-title">Together</div>
-                <div class="project-description">A modern chat application with real-time messaging, group chats, streaks, achievements, and a beautiful purple/pink aesthetic. Connect with friends worldwide!</div>
+                <div class="project-description">Modern chat app with real-time messaging, group chats, streaks, achievements. React frontend, vibrant UI.</div>
                 <div class="live-site">🔗 Live Site</div>
             </a>
 
-            <!-- Project 4: Wallpaper Paradise - NEW ADDITION -->
+            <!-- Wallpaper Paradise (React + Laravel) -->
             <a href="https://wallpaper-paradise.vercel.app/" target="_blank" class="project-card">
                 <div class="project-icon">🖼️</div>
                 <div class="project-title">Wallpaper Paradise</div>
-                <div class="project-description">A stunning wallpaper gallery website built with React. Features search, category filters, modal view with navigation arrows, download functionality, and fully responsive design.</div>
+                <div class="project-description">Wallpaper gallery built with React & Laravel. Search, category filters, modal view, download functionality, responsive design for gaming/car enthusiasts.</div>
                 <div class="live-site">🔗 Live Site</div>
             </a>
 
-            <!-- Project 5: Template for your next project -->
+            <!-- Personal Portfolio Website -->
+            <a href="#" target="_blank" class="project-card" style="opacity: 0.95;">
+                <div class="project-icon">🌐</div>
+                <div class="project-title">Personal Portfolio</div>
+                <div class="project-description">Responsive portfolio site (HTML, CSS, JS) showcasing projects and skills. Fully mobile-friendly.</div>
+                <div class="live-site" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">✨ View Repo</div>
+            </a>
+
+            <!-- Next milestone / placeholder -->
             <a href="#" target="_blank" class="project-card" style="opacity: 0.85;">
                 <div class="project-icon">🚧</div>
-                <div class="project-title">Next Project (Coming Soon)</div>
-                <div class="project-description">Your next amazing project will appear here. Update this card with your actual project link and details.</div>
-                <div class="live-site" style="background: #999;">⏳ Coming Soon</div>
+                <div class="project-title">More Coming Soon</div>
+                <div class="project-description">New full-stack projects in React Native, advanced Laravel APIs — stay tuned.</div>
+                <div class="live-site" style="background: #999;">⏳ In Progress</div>
             </a>
         </div>
 
-        <!-- Social Links -->
+        <!-- Additional Resume Details (CV in depth) -->
+        <div class="title-wrapper">
+            <div class="section-title">📋 Full CV Highlights</div>
+        </div>
+        <div class="resume-grid" style="margin-top: 0;">
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Experience & Projects Insight</h3>
+                </div>
+                <ul class="resume-list">
+                    <li><i class="fas fa-code-branch"></i> <strong>Wallpaper Paradise</strong> – React + Laravel full-stack: authentication, search, download, admin panel capabilities.</li>
+                    <li><i class="fas fa-mobile-alt"></i> <strong>Android Dev practice</strong> – Built small utility apps to strengthen mobile dev logic.</li>
+                    <li><i class="fas fa-palette"></i> <strong>Web Development & Debugging</strong> – Optimized websites for performance, cross-browser compatibility.</li>
+                    <li><i class="fas fa-users"></i> <strong>Content Creation & Digital Tools</strong> – Managed online platforms, improved design consistency and problem-solving.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-address-card"></i>
+                    <h3>Contact & Profiles</h3>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> <a href="mailto:breezemarlon272@gmail.com">breezemarlon272@gmail.com</a> / <a href="mailto:applebreeze160@gmail.com">applebreeze160@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i> +254 794 475 619
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i> <a href="https://github.com/breeze0g" target="_blank">github.com/breeze0g</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/bildad-matiko-249231389" target="_blank">linkedin.com/in/bildad-matiko</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i> Portfolio: This interactive site
+                </div>
+                <div style="margin-top: 16px; font-size: 14px;">
+                    <i class="fas fa-user-check"></i> <strong>References:</strong> Available upon request — MAT Secretary (+254111979744) / MAT Teacher (+254711578727)
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Why Hire Me?</h3>
+                </div>
+                <div class="info-text">
+                    <p>✔️ I translate ideas into functional, user-friendly web applications.<br>
+                    ✔️ Proven ability to work with React and Laravel ecosystem (full-stack projects).<br>
+                    ✔️ Quick learner: I hold certificates and constantly expand my stack.<br>
+                    ✔️ Resilient problem-solver: "I solve problems no matter what it takes."<br>
+                    ✔️ Interview nerves don't reflect my coding ability — I deliver results.</p>
+                    <div class="certificate-badge" style="background:#eef2ff;">
+                        <i class="fas fa-check-circle" style="color:#10b981;"></i> "Landing the job is the hardest part, but I'm ready to go all-in and learn more while in progress."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links (original untouched) -->
         <div class="social-links">
             <a href="https://github.com/breeze0g" target="_blank" rel="noopener noreferrer" class="social-link">
                 <i class="fab fa-github"></i> GitHub
@@ -304,17 +568,20 @@
                 <i class="fab fa-instagram"></i> Instagram
             </a>
             <a href="mailto:breezemarlon272@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i> Email
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/bildad-matiko-249231389" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
 
         <footer>
-            &copy; 2026 Bildad Mwita. All rights reserved.
+            &copy; 2026 Bildad Mwita Matiko — Full-Stack Developer. Built with React, Laravel & creative persistence.
         </footer>
     </div>
 
     <script>
-        // Spider Web / Particle Network Animation
+        // Spider Web / Particle Network Animation (enhanced, same as original with subtle improvements)
         const canvas = document.getElementById('bgCanvas');
         const ctx = canvas.getContext('2d');
         
@@ -323,7 +590,6 @@
         let mouseX = null, mouseY = null;
         let mouseRadius = 150;
         
-        // Particle class
         class Particle {
             constructor(x, y) {
                 this.x = x || Math.random() * width;
@@ -336,17 +602,14 @@
             }
             
             update() {
-                // Move particles
                 this.x += this.vx;
                 this.y += this.vy;
                 
-                // Wrap around edges
                 if (this.x < 0) this.x = width;
                 if (this.x > width) this.x = 0;
                 if (this.y < 0) this.y = height;
                 if (this.y > height) this.y = 0;
                 
-                // Mouse interaction - particles move away from mouse
                 if (mouseX !== null && mouseY !== null) {
                     const dx = this.x - mouseX;
                     const dy = this.y - mouseY;
@@ -371,17 +634,14 @@
             }
         }
         
-        // Create particles
         function initParticles() {
             particles = [];
             const particleCount = Math.min(150, Math.floor(width * height / 8000));
-            
             for (let i = 0; i < particleCount; i++) {
                 particles.push(new Particle());
             }
         }
         
-        // Draw connections (spider web effect)
         function drawConnections() {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
@@ -403,44 +663,33 @@
             }
         }
         
-        // Draw glow effect around mouse
         function drawMouseGlow() {
             if (mouseX !== null && mouseY !== null) {
                 const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, mouseRadius);
-                gradient.addColorStop(0, 'rgba(102, 126, 234, 0.15)');
+                gradient.addColorStop(0, 'rgba(102, 126, 234, 0.2)');
                 gradient.addColorStop(1, 'rgba(102, 126, 234, 0)');
                 ctx.fillStyle = gradient;
                 ctx.fillRect(0, 0, width, height);
             }
         }
         
-        // Animation loop
         function animate() {
             ctx.clearRect(0, 0, width, height);
-            
-            // Draw gradient background
             const gradient = ctx.createLinearGradient(0, 0, width, height);
             gradient.addColorStop(0, '#0a0a2a');
             gradient.addColorStop(1, '#1a1a4a');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
             
-            // Update and draw particles
             for (let particle of particles) {
                 particle.update();
                 particle.draw();
             }
-            
-            // Draw connections
             drawConnections();
-            
-            // Draw mouse glow
             drawMouseGlow();
-            
             requestAnimationFrame(animate);
         }
         
-        // Handle window resize
         function resizeCanvas() {
             width = window.innerWidth;
             height = window.innerHeight;
@@ -449,31 +698,14 @@
             initParticles();
         }
         
-        // Mouse move tracking
         function onMouseMove(e) {
             mouseX = e.clientX;
             mouseY = e.clientY;
         }
+        function onMouseLeave() { mouseX = null; mouseY = null; }
+        function onTouchMove(e) { if (e.touches.length) { mouseX = e.touches[0].clientX; mouseY = e.touches[0].clientY; } }
+        function onTouchEnd() { mouseX = null; mouseY = null; }
         
-        function onMouseLeave() {
-            mouseX = null;
-            mouseY = null;
-        }
-        
-        // Touch support for mobile
-        function onTouchMove(e) {
-            if (e.touches.length > 0) {
-                mouseX = e.touches[0].clientX;
-                mouseY = e.touches[0].clientY;
-            }
-        }
-        
-        function onTouchEnd() {
-            mouseX = null;
-            mouseY = null;
-        }
-        
-        // Initialize
         window.addEventListener('resize', resizeCanvas);
         window.addEventListener('mousemove', onMouseMove);
         window.addEventListener('mouseleave', onMouseLeave);
@@ -483,17 +715,16 @@
         resizeCanvas();
         animate();
         
-        // Add animation on page load for project cards
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.project-card');
+            const cards = document.querySelectorAll('.project-card, .info-card');
             cards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
-                    card.style.transition = 'all 0.5s ease';
+                    card.style.transition = 'all 0.4s ease';
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, index * 100);
+                }, index * 60);
             });
         });
     </script>
